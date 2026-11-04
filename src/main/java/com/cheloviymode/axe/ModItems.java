@@ -13,10 +13,8 @@ public class ModItems {
     public static final DeferredItem<AxeItem> AXE = ITEMS.registerItem(
             "great_axe",
             props -> new AxeItem(
-                    Tiers.IRON,
-                    10.0f,
-                    -3.2f,
-                    new Item.Properties() // <-- ВОТ ТАК ПРАВИЛЬНО ДЛЯ 1.21.1
+                    Tiers.IRON,             // Материал (в нём уже зашиты базовые параметры)
+                    new Item.Properties()   // Свойства предмета
             )
     );
 }
