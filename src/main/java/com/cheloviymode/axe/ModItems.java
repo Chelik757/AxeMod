@@ -1,5 +1,6 @@
 package com.cheloviymode.axe;
 
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tiers;
@@ -13,8 +14,10 @@ public class ModItems {
     public static final DeferredItem<AxeItem> AXE = ITEMS.registerItem(
             "great_axe",
             props -> new AxeItem(
-                    Tiers.IRON,             // Материал (в нём уже зашиты базовые параметры)
-                    new Item.Properties()   // Свойства предмета
+                    Tiers.IRON,
+                    new Item.Properties().attributes(
+                            AxeItem.createAttributes(Tiers.IRON, 10.0f, -3.2f)
+                    )
             )
     );
 }
